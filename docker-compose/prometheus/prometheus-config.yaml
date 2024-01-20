@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: '/spring-feign-client'
+    metrics_path: '/spring-feign-client/actuator/prometheus'
+    scrape_interval: 2s
+    static_configs:
+      - targets: [ 'host.docker.internal:8001' ]
+        labels:
+          app: 'spring-feign-client'

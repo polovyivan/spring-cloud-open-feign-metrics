@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "571ffc7f-5520-4e67-9206-bc35b4972a3a",
+		"name": "spring-cloud-open-feign-introduction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9825253"
+	},
+	"item": [
+		{
+			"name": "spring-feign-client",
+			"item": [
+				{
+					"name": "/customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "=Ivan Polovyi_1",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "626.164.7481",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2015-09-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "phoneNumber",
+									"value": "626.164.7481",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2015-09-01",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "386f5d7f-9710-47bb-b77e-2da9293ca87b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ivan Polovyi\",\n    \"phoneNumber\": \"831.259.2365\",\n    \"address\": \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"=Ivan Polovyi_1\",\n    \"phoneNumber\": \"=931.259.2365\",\n    \"address\": \"=Bpt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "386f5d7f-9710-47bb-b77e-2da9293ca87b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"55555=931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "386f5d7f-9710-47bb-b77e-2da9293ca87b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"=931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-feign-client/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-feign-client",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Rueben Purdy",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "386f5d7f-9710-47bb-b77e-2da9293ca87b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spring-customer-app",
+			"item": [
+				{
+					"name": "/customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Ivan Polovyi",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Ivan Polovyi",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "cbc7e8f4-0daf-4ad4-80b8-f4a17a8877cd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ivan Polovyi\",\n    \"phoneNumber\": \"831.259.2365\",\n    \"address\": \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"=Ivan\",\n    \"phoneNumber\": \"=931.259.2365\",\n    \"address\": \"=Bpt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "cbc7e8f4-0daf-4ad4-80b8-f4a17a8877cd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Rueben Purdy",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "cbc7e8f4-0daf-4ad4-80b8-f4a17a8877cd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/spring-customer-app/v1/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"spring-customer-app",
+								"v1",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "cbc7e8f4-0daf-4ad4-80b8-f4a17a8877cd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

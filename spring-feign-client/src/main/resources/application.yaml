@@ -1,0 +1,21 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /spring-feign-client
+
+logging:
+  level:
+    com.polovyi.ivan.client: DEBUG
+
+feign:
+  client:
+    url: http://localhost:8001/spring-customer-app/v1/customers
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
