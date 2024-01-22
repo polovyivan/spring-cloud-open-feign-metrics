@@ -1,7 +1,11 @@
 server:
   port: 8002
   servlet:
-    context-path: /spring-feign-client
+    context-path: /spring-cloud-open-feign-metrics
+
+spring:
+  application:
+    name: spring-cloud-open-feign-metrics
 
 logging:
   level:
@@ -15,7 +19,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, metrics, prometheus
+        include: health, metrics, prometheus, info
   metrics:
     tags:
       application: ${spring.application.name}
