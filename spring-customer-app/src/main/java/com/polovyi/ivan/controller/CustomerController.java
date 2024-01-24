@@ -39,12 +39,6 @@ public class CustomerController {
             @RequestParam(required = false) String fullName,
             @RequestParam(required = false) String phoneNumber,
             @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate createdAt) {
-        // timeout testing
-//        try {
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
         return customerService.getCustomersWithFilters(fullName, phoneNumber, createdAt);
     }
 

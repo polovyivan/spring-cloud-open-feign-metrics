@@ -7,14 +7,6 @@ spring:
   application:
     name: spring-cloud-open-feign-metrics
 
-logging:
-  level:
-    com.polovyi.ivan.client: DEBUG
-
-feign:
-  client:
-    url: http://localhost:8001/spring-customer-app/v1/customers
-
 management:
   endpoints:
     web:
@@ -23,3 +15,11 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
+logging:
+  level:
+    com.polovyi.ivan.client: DEBUG
+
+feign:
+  client:
+    url: http://localhost:8001/spring-customer-app/v1/customers

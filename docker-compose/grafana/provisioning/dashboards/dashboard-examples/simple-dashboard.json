@@ -110,7 +110,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "irate(feign_Feign_seconds_sum[$__rate_interval]) / irate(feign_Feign_seconds_count[$__rate_interval])",
+          "expr": " rate(feign_Feign_seconds_sum[$__rate_interval]) / rate(feign_Feign_seconds_count[$__rate_interval])",
           "legendFormat": "{{method}}",
           "range": true,
           "refId": "A"
@@ -202,7 +202,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "irate(feign_Feign_seconds_count[$__rate_interval])",
+          "expr": " increase(feign_Client_seconds_count[$__rate_interval])",
           "legendFormat": "{{method}}",
           "range": true,
           "refId": "A"
@@ -300,7 +300,7 @@
           "refId": "A"
         }
       ],
-      "title": "Request Count",
+      "title": "Request Count By Response Code",
       "type": "timeseries"
     }
   ],
